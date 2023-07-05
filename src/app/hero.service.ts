@@ -12,7 +12,7 @@ export class HeroService {
   constructor(private messageService: MessageService) { }
 
   getHeroes(): Observable<Hero[]> {
-    const heroes = of(HEROES);
+    const heroes = of(HEROES); // of returns an Observable<Hero> that emits the mock heroes array
     this.messageService.add('HeroService: fetched heroes');
     return heroes;
   }
