@@ -18,7 +18,6 @@ export class HeroService {
   private log(message: string) { // frequent calls so use log()
     this.messageService.add(`HeroService: ${message}`);
   }
-
   private heroesUrl = "api/heroes";
 
   getHeroes(): Observable<Hero[]> {
